@@ -80,7 +80,7 @@ namespace ex03_CampeonDeBarrio
         /// Identifica quien es el campeón entre los jugadores a partir del criterio definido
         /// </summary>
         /// <param name="losJugadores">Arreglo de los jugadores</param>
-        static void IdentificaCampeon(Jugador[] arregloJugadores)
+        public static float IdentificaCampeon(Jugador[] arregloJugadores)
         {
             //Arbitrariamente seleccionamos el campeón como el primer jugador del arreglo
             Jugador jugadorCampeon = arregloJugadores[0];
@@ -111,6 +111,7 @@ namespace ex03_CampeonDeBarrio
                     if (unJugador.Promedio == jugadorCampeon.Promedio)
                         Console.WriteLine($"- {unJugador.Nombre} con {unJugador.Campañas} campaña(s) jugadas");
             }
+            return jugadorCampeon.Promedio;
         }
     }
 }
